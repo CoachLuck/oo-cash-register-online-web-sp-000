@@ -22,7 +22,7 @@ class CashRegister
   def add_item(title, price, amt = 1)
     self.total += price * amt
     item = {title: title, price: price, amount: amt}
-    amt.do
+    amt.loop
       self.items << title
     end
   end
