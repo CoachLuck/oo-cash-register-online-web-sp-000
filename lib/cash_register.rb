@@ -20,7 +20,7 @@ class CashRegister
 
   def add_item(title, price, amt = 1)
     @total += price
-    item = {title: title, price: price: amt}
+    item = {title: title, price: price, amount: amt}
     @items << item
   end
 end
