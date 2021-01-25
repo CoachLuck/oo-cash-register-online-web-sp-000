@@ -44,7 +44,7 @@ class CashRegister
   def items
     all = []
     @items.each{ |item|
-      item.amt.loop do
+      item.amt.times do
         all << item.name
       end
     }
