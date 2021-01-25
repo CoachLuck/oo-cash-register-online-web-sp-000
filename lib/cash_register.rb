@@ -22,10 +22,10 @@ class CashRegister
   def add_item(title, price, amt = 1)
     self.total += price * amt
     item = {title: title, price: price, amount: amt}
-    self.items << item
+    self.items << title
   end
 
   def items
-    @items.collect{ |item| item[:title]}
+    @items
   end
 end
