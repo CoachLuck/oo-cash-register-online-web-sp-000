@@ -27,7 +27,7 @@ class CashRegister
 
   def apply_discount
     return puts "There is no discount to apply" if @discount <= 0
-    @total = @total - ((@total) / (100 - @discount))
+    @total -= @total * @discount / 100
   end
 
   def items
