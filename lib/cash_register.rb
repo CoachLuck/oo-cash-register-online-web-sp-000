@@ -11,7 +11,7 @@ class Person
 end
 
 class CashRegister
-  attr_accessor :total, :items
+  attr_accessor :total, :discount, :items
 
   def initialize(discount = 0)
     @total = 0;
