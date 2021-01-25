@@ -23,4 +23,8 @@ class CashRegister
     item = {title: title, price: price, amount: amt}
     self.items << item
   end
+
+  def items
+    items.collect{ |item| item[:title]}
+  end
 end
