@@ -32,6 +32,6 @@ class CashRegister
   end
 
   def items
-    @items.uniq
+    @items
   end
 end
