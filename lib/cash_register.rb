@@ -10,6 +10,16 @@ class Person
   end
 end
 
+class Item
+  attr_reader :name, :price, :amt
+
+  def initialize(name, price, amt = 1)
+    @name = name
+    @price = price * amt
+    @amt = amt
+  end
+end
+
 class CashRegister
   attr_accessor :total, :discount, :items
 
@@ -20,10 +30,9 @@ class CashRegister
   end
 
   def add_item(title, price, amt = 1)
-    amt.times do
-      self.total += price
-      self.items << title
-    end
+    item = Item.new(title, price, amt)
+    @total += price
+    @items << item
   end
 
   def apply_discount
@@ -35,4 +44,6 @@ class CashRegister
   def items
     @items
   end
+
+  def void_last_transaction
 end
