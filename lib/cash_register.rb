@@ -25,6 +25,10 @@ class CashRegister
     self.items << title
   end
 
+  def apply_discount
+    @total - @total * .@discount
+  end
+
   def items
     @items
   end
