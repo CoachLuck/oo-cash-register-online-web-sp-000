@@ -25,6 +25,6 @@ class CashRegister
   end
 
   def items
-    self.items.collect{ |item| item[:title]}
+    @items.collect{ |item| item[:title]}
   end
 end
