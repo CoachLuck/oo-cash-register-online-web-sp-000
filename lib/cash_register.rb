@@ -48,6 +48,7 @@ class CashRegister
         all << item.name
       end
     }
+    all
   end
 
   def void_last_transaction
