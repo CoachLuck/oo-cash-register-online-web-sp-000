@@ -32,7 +32,7 @@ class CashRegister
   def add_item(name, price, amt = 1)
     item = Item.new(name, price, amt)
     @total += item.price
-    @items << item.name
+    @items << item
   end
 
   def apply_discount
@@ -42,7 +42,12 @@ class CashRegister
   end
 
   def items
-    @items
+    all = []
+    @items.each{ |item|
+      item.amt.loop do
+        all << item.name
+      end
+    }
   end
 
   def void_last_transaction
