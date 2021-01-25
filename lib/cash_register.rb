@@ -29,10 +29,10 @@ class CashRegister
     @items = [];
   end
 
-  def add_item(title, price, amt = 1)
-    item = Item.new(title, price, amt)
-    @total += price
-    @items << item
+  def add_item(name, price, amt = 1)
+    item = Item.new(name, price, amt)
+    @total += item.price
+    @items << item.name
   end
 
   def apply_discount
